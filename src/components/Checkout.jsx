@@ -32,7 +32,7 @@ const Checkout = () => {
     <div className="min-h-screen bg-gray-50 px-4 py-10">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         
-        {/* LEFT SECTION */}
+        
         <div className="md:col-span-2 space-y-6">
           
           <h2 className="text-2xl font-bold text-gray-800">
@@ -82,7 +82,7 @@ const Checkout = () => {
           )}
         </div>
 
-        {/* RIGHT SECTION - PRICE DETAILS */}
+        
         {cart.length > 0 && (
           <div className="bg-white rounded-lg shadow p-6 h-fit sticky top-24">
             
