@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -22,19 +13,16 @@ const Shop = () => {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-10">
       
-      {/* Page Title */}
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
         Shop the worlds premium brands here
       </h1>
 
-      {/* Product Grid */}
       <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {products.map(product => (
           <div
             key={product.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-5 flex flex-col"
           >
-            {/* Product Image */}
             <div className="flex items-center justify-center h-48">
               <img
                 src={product.image}
@@ -43,7 +31,6 @@ const Shop = () => {
               />
             </div>
 
-            {/* Product Info */}
             <div className="flex flex-col flex-grow mt-4">
               <h3 className="font-semibold text-gray-800 text-sm md:text-base">
                 {product.title.length > 50
