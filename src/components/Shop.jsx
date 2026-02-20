@@ -1,35 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-
-// const Shop = () => {
-//   const [products, setProducts] = useState([]);
-
-//   useEffect(() => {
-//     fetch("https://fakestoreapi.com/products")
-//       .then(res => res.json())
-//       .then(data => setProducts(data));
-//   }, []);
-
-//   return (
-//     <div className="grid md:grid-cols-4 gap-6 p-6">
-//       {products.map(product => (
-//         <div key={product.id} className="border p-4 rounded shadow">
-//           <img src={product.image} className="h-40 mx-auto" />
-//           <h3 className="font-semibold mt-2">
-//             {product.title.slice(0, 40)}...
-//           </h3>
-//           <p className="text-green-600 font-bold">${product.price}</p>
-//           <Link to={`/product/${product.id}`} className="text-blue-500">
-//             View
-//           </Link>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Shop;
-
 
 
 
