@@ -1,3 +1,5 @@
+
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "./CartContext";
@@ -8,9 +10,9 @@ const Product = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then(res => res.json())
-      .then(data => setProduct(data));
+    fetch(`https://dummyjson.com/products/${id}`)
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
   }, [id]);
 
   if (!product)
@@ -28,7 +30,7 @@ const Product = () => {
         
         <div className="flex items-center justify-center">
           <img
-            src={product.image}
+            src={product.thumbnail}
             alt={product.title}
             className="h-72 md:h-96 object-contain hover:scale-105 transition duration-300"
           />
@@ -50,6 +52,13 @@ const Product = () => {
           <p className="text-gray-600 mt-6 leading-relaxed">
             {product.description}
           </p>
+
+          <div className="flex items-center gap-2 mt-4">
+            <span className="text-yellow-500 text-lg">Ratings:</span>
+            <span className="text-gray-700 font-medium">
+              {product.rating}
+            </span>
+          </div>
 
           <button
             onClick={() => addToCart(product)}

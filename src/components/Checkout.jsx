@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "./CartContext";
@@ -18,7 +20,7 @@ const Checkout = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="bg-white shadow-lg rounded-xl p-10 text-center">
           <h1 className="text-2xl font-bold text-green-600">
-             Order Placed Successfully!
+            Order Placed Successfully!
           </h1>
           <p className="text-gray-500 mt-2">
             Redirecting to homepage...
@@ -31,7 +33,6 @@ const Checkout = () => {
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-10">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-        
         
         <div className="md:col-span-2 space-y-6">
           
@@ -59,7 +60,7 @@ const Checkout = () => {
                   className="flex gap-4 p-4 items-center"
                 >
                   <img
-                    src={item.image}
+                    src={item.thumbnail}
                     alt={item.title}
                     className="h-20 w-20 object-contain bg-gray-100 p-2 rounded"
                   />
@@ -82,7 +83,6 @@ const Checkout = () => {
           )}
         </div>
 
-        
         {cart.length > 0 && (
           <div className="bg-white rounded-lg shadow p-6 h-fit sticky top-24">
             
